@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sugeng Supriyadi - Backend Software Engineer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%230ea5e9'>⚙️</text></svg>" type="image/svg+xml">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -45,14 +48,33 @@
         }
         
         body {
-            font-family: 'JetBrains Mono', 'Inter', monospace, sans-serif;
+            font-family: 'JetBrains Mono', monospace;
             background-color: #0F172A; /* slate-900 */
             color: #94A3B8; /* slate-400 */
             line-height: 1.6;
         }
         
+        /* Vanta.js Background Styles */
+        #vanta-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: rgba(15, 23, 42, 0.85); /* Semi-transparent overlay for better readability */
+            backdrop-filter: blur(2px);
+            min-height: 100vh;
+        }
+        
         /* Improve readability for monospaced fonts */
         p, li {
+            font-family: 'JetBrains Mono', monospace;
             font-size: 0.95rem;
             letter-spacing: -0.01em;
         }
@@ -91,6 +113,9 @@
     </style>
 </head>
 <body class="antialiased">
+    <!-- Vanta.js Background -->
+    <div id="vanta-background"></div>
+    
     <!-- Loading Screen -->
     <div id="loading-screen">
         <div class="loading-spinner"></div>
@@ -154,7 +179,8 @@
             </header>
 
             <!-- Right Column (Content) -->
-            <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
+            <div class="content-wrapper">
+            <main id="content" class="pt-24 lg:w-4/5 lg:max-w-4xl lg:mx-auto lg:py-24 bg-slate-900/90 backdrop-blur-sm rounded-lg p-6">
                 <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 fade-in-section" aria-label="About me">
                     <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200">About</h2>
                     <p class="mt-4">
@@ -173,11 +199,30 @@
                             <div class="flex-shrink-0 w-28 text-sm font-semibold text-slate-500 uppercase pt-1">2021 — Present</div>
                             <div class="w-full">
                                 <h3 class="font-medium leading-snug text-slate-200">
-                                    Backend Software Engineer · <span>[Your Company Name Here]</span>
+                                    Backend Software Engineer · <span><a href="https://nusatek.id/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300">Nusatek</a></span>
                                 </h3>
-                                <p class="mt-2 text-sm leading-normal">
-                                    Architected and implemented a Change Data Capture (CDC) infrastructure in Go to stream real-time changes from multiple PostgreSQL databases into BigQuery, utilizing Google Cloud Platform (GCP) and Pub/Sub for a scalable and resilient data pipeline. Led the migration and enhancement of a multi-channel notification system from Python to Go, re-engineering it to include a highly reliable callback mechanism. Designed and deployed a robust API gateway in Go for a mobile application.
-                                </p>
+                                <ul class="mt-2 text-sm leading-normal space-y-1">
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Architected and implemented a Change Data Capture (CDC) infrastructure in Go to stream real-time changes from multiple PostgreSQL databases into BigQuery</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Utilized Google Cloud Platform (GCP) and Pub/Sub for a scalable and resilient data pipeline</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Led the migration and enhancement of a multi-channel notification system from Python to Go</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Re-engineered notification system to include a highly reliable callback mechanism</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Designed and deployed a robust API gateway in Go for a mobile application</span>
+                                    </li>
+                                </ul>
                                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
                                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">Go (Golang)</div></li>
                                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">GCP</div></li>
@@ -195,9 +240,20 @@
                                 <h3 class="font-medium leading-snug text-slate-200">
                                     Full Stack Developer · <span>Freelance</span>
                                 </h3>
-                                <p class="mt-2 text-sm leading-normal">
-                                    Designed and developed a comprehensive Member Management System for the Indonesian Broker Community (Indobroker). Developed a webcam-based time attendance system using Django and OpenCV. Engineered an adaptive online tryout platform implementing the Item Response Theory (IRT) algorithm.
-                                </p>
+                                <ul class="mt-2 text-sm leading-normal space-y-1">
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Designed and developed a comprehensive Member Management System for the Indonesian Broker Community (Indobroker)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Developed a webcam-based time attendance system using Django and OpenCV</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Engineered an adaptive online tryout platform implementing the Item Response Theory (IRT) algorithm</span>
+                                    </li>
+                                </ul>
                                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
                                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">Python</div></li>
                                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">Django</div></li>
@@ -214,9 +270,24 @@
                                 <h3 class="font-medium leading-snug text-slate-200">
                                     Full Stack Developer · <span>Universitas Prof. Dr. Moestopo</span>
                                 </h3>
-                                <p class="mt-2 text-sm leading-normal">
-                                    Led the end-to-end development of the campus academic system using Go. Developed a student course registration (KRS) management module, a secure online grade submission portal for lecturers, and an automated service for mandatory semesterly reports to DIKTI.
-                                </p>
+                                <ul class="mt-2 text-sm leading-normal space-y-1">
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Led the end-to-end development of the campus academic system using Go</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Developed a student course registration (KRS) management module</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Created a secure online grade submission portal for lecturers</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Built an automated service for mandatory semesterly reports to DIKTI</span>
+                                    </li>
+                                </ul>
                                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
                                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">Go (Golang)</div></li>
                                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">BNI Virtual Account API</div></li>
@@ -231,9 +302,20 @@
                                 <h3 class="font-medium leading-snug text-slate-200">
                                     Senior Programmer · <span>PT. USMART Software House</span>
                                 </h3>
-                                <p class="mt-2 text-sm leading-normal">
-                                   Served as a main developer for SISFO KAMPUS, a leading Academic Information System. Led the successful implementation for numerous universities across Indonesia. Developed and integrated a critical reporting service for EPSBED.
-                                </p>
+                                <ul class="mt-2 text-sm leading-normal space-y-1">
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Served as a main developer for SISFO KAMPUS, a leading Academic Information System</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Led the successful implementation for numerous universities across Indonesia</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Developed and integrated a critical reporting service for EPSBED</span>
+                                    </li>
+                                </ul>
                                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
                                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono">PHP</div></li>
                                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono">MySQL</div></li>
@@ -249,9 +331,16 @@
                                 <h3 class="font-medium leading-snug text-slate-200">
                                     Junior Programmer · <span>Universitas Krida Wacana</span>
                                 </h3>
-                                <p class="mt-2 text-sm leading-normal">
-                                   Contributed to the development of the university's first online academic system. Assisted in upgrading the financial system by integrating an Autodebit feature.
-                                </p>
+                                <ul class="mt-2 text-sm leading-normal space-y-1">
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Contributed to the development of the university's first online academic system</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-cyan-300 mr-2 mt-1">•</span>
+                                        <span>Assisted in upgrading the financial system by integrating an Autodebit feature</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
 
@@ -327,9 +416,28 @@
                 </footer>
 
             </main>
+            </div>
         </div>
     </div>
     <script>
+        // Vanta.js NET effect initialization - more subtle settings
+        VANTA.NET({
+            el: '#vanta-background',
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 0.50, // Reduced scale for subtlety
+            scaleMobile: 0.50,
+            color: 0x0ea5e9, // sky-500 color - softer blue
+            backgroundColor: 0x0f172a, // slate-900 color
+            points: 8.00, // Fewer points
+            maxDistance: 15.00, // Smaller connections
+            spacing: 20.00, // More spacing
+            showDots: false // Hide dots for cleaner look
+        });
+
         // Hide loading screen when page is fully loaded
         window.addEventListener('load', () => {
             const loadingScreen = document.getElementById('loading-screen');

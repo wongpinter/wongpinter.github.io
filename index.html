@@ -6,6 +6,7 @@
     <title>Sugeng Supriyadi - Backend Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         /* Loading Screen Styles */
         #loading-screen {
@@ -35,7 +36,7 @@
         .loading-text {
             margin-top: 20px;
             color: #94A3B8;
-            font-family: 'Inter', sans-serif;
+            font-family: 'JetBrains Mono', monospace;
             font-size: 1rem;
         }
         
@@ -44,9 +45,20 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'JetBrains Mono', 'Inter', monospace, sans-serif;
             background-color: #0F172A; /* slate-900 */
             color: #94A3B8; /* slate-400 */
+            line-height: 1.6;
+        }
+        
+        /* Improve readability for monospaced fonts */
+        p, li {
+            font-size: 0.95rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .tech-badge {
+            font-family: 'JetBrains Mono', monospace;
         }
         .group:hover .group-hover\:text-cyan-400 {
             color: #22d3ee;
@@ -167,11 +179,11 @@
                                     Architected and implemented a Change Data Capture (CDC) infrastructure in Go to stream real-time changes from multiple PostgreSQL databases into BigQuery, utilizing Google Cloud Platform (GCP) and Pub/Sub for a scalable and resilient data pipeline. Led the migration and enhancement of a multi-channel notification system from Python to Go, re-engineering it to include a highly reliable callback mechanism. Designed and deployed a robust API gateway in Go for a mobile application.
                                 </p>
                                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Go (Golang)</div></li>
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">GCP</div></li>
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">BigQuery</div></li>
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">PostgreSQL</div></li>
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">RabbitMQ</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">Go (Golang)</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">GCP</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">BigQuery</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">PostgreSQL</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">RabbitMQ</div></li>
                                 </ul>
                             </div>
                         </div>
@@ -187,10 +199,10 @@
                                     Designed and developed a comprehensive Member Management System for the Indonesian Broker Community (Indobroker). Developed a webcam-based time attendance system using Django and OpenCV. Engineered an adaptive online tryout platform implementing the Item Response Theory (IRT) algorithm.
                                 </p>
                                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Python</div></li>
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Django</div></li>
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">OpenCV</div></li>
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">R</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">Python</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">Django</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">OpenCV</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">R</div></li>
                                 </ul>
                             </div>
                         </div>
@@ -206,8 +218,8 @@
                                     Led the end-to-end development of the campus academic system using Go. Developed a student course registration (KRS) management module, a secure online grade submission portal for lecturers, and an automated service for mandatory semesterly reports to DIKTI.
                                 </p>
                                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Go (Golang)</div></li>
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">BNI Virtual Account API</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">Go (Golang)</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">BNI Virtual Account API</div></li>
                                 </ul>
                             </div>
                         </div>
@@ -223,9 +235,9 @@
                                    Served as a main developer for SISFO KAMPUS, a leading Academic Information System. Led the successful implementation for numerous universities across Indonesia. Developed and integrated a critical reporting service for EPSBED.
                                 </p>
                                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">PHP</div></li>
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">MySQL</div></li>
-                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Apache</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono">PHP</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono">MySQL</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono">Apache</div></li>
                                 </ul>
                             </div>
                         </div>
@@ -253,12 +265,16 @@
                         <div class="group mb-8 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                             <div class="flex flex-col sm:flex-row rounded-md group-hover:bg-slate-800/50 p-4 -m-4">
                                 <div class="w-full">
-                                    <h3 class="font-medium leading-snug text-slate-200">Keyboard Layout Trainer</h3>
+                                    <h3 class="font-medium leading-snug text-slate-200">
+                                        <a href="https://github.com/wongpinter/keyboard-layout-trainer" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300">
+                                            Keyboard Layout Trainer
+                                        </a>
+                                    </h3>
                                     <p class="mt-2 text-sm leading-normal">
                                         Developed a web-based typing tutor specifically for the COLEMAK-DHm layout to improve personal typing speed and accuracy.
                                     </p>
                                     <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
-                                        <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">ReactJS</div></li>
+                                        <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">ReactJS</div></li>
                                     </ul>
                                 </div>
                             </div>
@@ -268,12 +284,16 @@
                         <div class="group mb-8 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                             <div class="flex flex-col sm:flex-row rounded-md group-hover:bg-slate-800/50 p-4 -m-4">
                                 <div class="w-full">
-                                    <h3 class="font-medium leading-snug text-slate-200">Webnovel Epub Generator</h3>
+                                    <h3 class="font-medium leading-snug text-slate-200">
+                                        <a href="https://github.com/wongpinter/webnovel-epub-generator" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300">
+                                            Webnovel Epub Generator
+                                        </a>
+                                    </h3>
                                     <p class="mt-2 text-sm leading-normal">
                                         Created a script to scrape content from multiple webnovel sources and compile it into a standardized EPUB format for personal e-reading.
                                     </p>
                                     <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
-                                        <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Python</div></li>
+                                        <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">Python</div></li>
                                     </ul>
                                 </div>
                             </div>
@@ -283,12 +303,16 @@
                         <div class="group transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                             <div class="flex flex-col sm:flex-row rounded-md group-hover:bg-slate-800/50 p-4 -m-4">
                                 <div class="w-full">
-                                    <h3 class="font-medium leading-snug text-slate-200">Ketawa.com Mobile App</h3>
+                                    <h3 class="font-medium leading-snug text-slate-200">
+                                        <a href="https://github.com/wongpinter/ketawa-mobile-app" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300">
+                                            Ketawa.com Mobile App
+                                        </a>
+                                    </h3>
                                     <p class="mt-2 text-sm leading-normal">
                                         Built a native Android application for the humor website Ketawa.com as a personal project to explore mobile development with Kotlin.
                                     </p>
                                     <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
-                                        <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Kotlin</div></li>
+                                        <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 font-mono tech-badge">Kotlin</div></li>
                                     </ul>
                                 </div>
                             </div>

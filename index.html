@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugeng Supriyadi - Backend Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0F172A;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(34, 211, 238, 0.3);
+            border-radius: 50%;
+            border-top-color: #22d3ee;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        .loading-text {
+            margin-top: 20px;
+            color: #94A3B8;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* slate-900 */
+            color: #94A3B8; /* slate-400 */
+        }
+        .group:hover .group-hover\:text-cyan-400 {
+            color: #22d3ee;
+        }
+        .group:hover .group-hover\:bg-slate-800 {
+            background-color: #1E293B;
+        }
+        .group:hover .group-hover\:border-slate-600 {
+           border-color: #475569;
+        }
+        .group:hover .group-hover\:scale-105 {
+            transform: scale(1.05);
+        }
+        .nav-link.active {
+            color: #E2E8F0; /* slate-200 */
+        }
+        .nav-link.active .nav-indicator {
+            width: 3rem;
+            background-color: #E2E8F0; /* slate-200 */
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+    <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+        <div class="lg:flex lg:justify-between lg:gap-4">
+            <!-- Left Column (Header) -->
+            <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+                <div>
+                    <h1 class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+                        <a href="/">Sugeng Supriyadi</a>
+                    </h1>
+                    <h2 class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+                        Backend Software Engineer | Cloud & Data Specialist
+                    </h2>
+                    <p class="mt-4 max-w-xs leading-normal">
+                        I build robust, scalable backends and cloud-native data solutions.
+                    </p>
+                    <nav class="nav hidden lg:block" aria-label="In-page jump links">
+                        <ul class="mt-16 w-max">
+                            <li>
+                                <a class="group flex items-center py-3 nav-link" href="#about">
+                                    <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200"></span>
+                                    <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">About</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group flex items-center py-3 nav-link" href="#experience">
+                                    <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200"></span>
+                                    <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">Experience</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group flex items-center py-3 nav-link" href="#projects">
+                                    <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200"></span>
+                                    <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">Projects</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <ul class="ml-1 mt-8 flex items-center" aria-label="Social media">
+                    <li class="mr-5 shrink-0">
+                        <a class="block hover:text-slate-200" href="https://github.com/wongpinter" target="_blank" rel="noreferrer noopener">
+                            <span class="sr-only">GitHub</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6" aria-hidden="true">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mr-5 shrink-0">
+                        <a class="block hover:text-slate-200" href="https://www.linkedin.com/in/sugengs/" target="_blank" rel="noreferrer noopener">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6" aria-hidden="true">
+                                <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 114.75 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.75c0-1.1-.02-2.5-1.5-2.5s-1.75 1.2-1.75 2.4V19h-3v-9h2.8v1.3h.04c.4-.75 1.37-1.54 2.77-1.54 2.97 0 3.52 1.95 3.52 4.5V19z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Right Column (Content) -->
+            <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
+                <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 fade-in-section" aria-label="About me">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200">About</h2>
+                    <p class="mt-4">
+                        A highly skilled and results-driven Backend Software Engineer with over 12 years of comprehensive experience, from foundational web development with PHP to architecting modern, cloud-native systems in Go and Python. Proven expertise in building scalable microservices, real-time data pipelines (CDC), and robust API gateways for high-traffic applications.
+                    </p>
+                    <p class="mt-4">
+                        Adept at leveraging Google Cloud Platform (GCP) and a wide range of technologies including BigQuery, Pub/Sub, RabbitMQ, and PostgreSQL to solve complex data synchronization, system integration, and enterprise-level challenges. A specialist in developing and modernizing academic and community management systems.
+                    </p>
+                </section>
+
+                <section id="experience" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 fade-in-section" aria-label="Work experience">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Experience</h2>
+                    <div>
+                        <!-- Experience Item 1 -->
+                        <div class="group mb-12 flex">
+                            <div class="flex-shrink-0 w-28 text-sm font-semibold text-slate-500 uppercase pt-1">2021 — Present</div>
+                            <div class="w-full">
+                                <h3 class="font-medium leading-snug text-slate-200">
+                                    Backend Software Engineer · <span>[Your Company Name Here]</span>
+                                </h3>
+                                <p class="mt-2 text-sm leading-normal">
+                                    Architected and implemented a Change Data Capture (CDC) infrastructure in Go to stream real-time changes from multiple PostgreSQL databases into BigQuery, utilizing Google Cloud Platform (GCP) and Pub/Sub for a scalable and resilient data pipeline. Led the migration and enhancement of a multi-channel notification system from Python to Go, re-engineering it to include a highly reliable callback mechanism. Designed and deployed a robust API gateway in Go for a mobile application.
+                                </p>
+                                <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Go (Golang)</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">GCP</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">BigQuery</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">PostgreSQL</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">RabbitMQ</div></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Experience Item 2 -->
+                        <div class="group mb-12 flex">
+                            <div class="flex-shrink-0 w-28 text-sm font-semibold text-slate-500 uppercase pt-1">2020 — 2021</div>
+                            <div class="w-full">
+                                <h3 class="font-medium leading-snug text-slate-200">
+                                    Full Stack Developer · <span>Freelance</span>
+                                </h3>
+                                <p class="mt-2 text-sm leading-normal">
+                                    Designed and developed a comprehensive Member Management System for the Indonesian Broker Community (Indobroker). Developed a webcam-based time attendance system using Django and OpenCV. Engineered an adaptive online tryout platform implementing the Item Response Theory (IRT) algorithm.
+                                </p>
+                                <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Python</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Django</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">OpenCV</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">R</div></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Experience Item 3 -->
+                        <div class="group mb-12 flex">
+                            <div class="flex-shrink-0 w-28 text-sm font-semibold text-slate-500 uppercase pt-1">2016 — 2020</div>
+                            <div class="w-full">
+                                <h3 class="font-medium leading-snug text-slate-200">
+                                    Full Stack Developer · <span>Universitas Prof. Dr. Moestopo</span>
+                                </h3>
+                                <p class="mt-2 text-sm leading-normal">
+                                    Led the end-to-end development of the campus academic system using Go. Developed a student course registration (KRS) management module, a secure online grade submission portal for lecturers, and an automated service for mandatory semesterly reports to DIKTI.
+                                </p>
+                                <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Go (Golang)</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">BNI Virtual Account API</div></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Experience Item 4 -->
+                         <div class="group mb-12 flex">
+                            <div class="flex-shrink-0 w-28 text-sm font-semibold text-slate-500 uppercase pt-1">2012 — 2015</div>
+                            <div class="w-full">
+                                <h3 class="font-medium leading-snug text-slate-200">
+                                    Senior Programmer · <span>PT. USMART Software House</span>
+                                </h3>
+                                <p class="mt-2 text-sm leading-normal">
+                                   Served as a main developer for SISFO KAMPUS, a leading Academic Information System. Led the successful implementation for numerous universities across Indonesia. Developed and integrated a critical reporting service for EPSBED.
+                                </p>
+                                <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">PHP</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">MySQL</div></li>
+                                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Apache</div></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                         <!-- Experience Item 5 -->
+                         <div class="group flex">
+                            <div class="flex-shrink-0 w-28 text-sm font-semibold text-slate-500 uppercase pt-1">2010 — 2012</div>
+                            <div class="w-full">
+                                <h3 class="font-medium leading-snug text-slate-200">
+                                    Junior Programmer · <span>Universitas Krida Wacana</span>
+                                </h3>
+                                <p class="mt-2 text-sm leading-normal">
+                                   Contributed to the development of the university's first online academic system. Assisted in upgrading the financial system by integrating an Autodebit feature.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section id="projects" class="scroll-mt-16 md:scroll-mt-24 fade-in-section" aria-label="Personal projects">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Personal Projects</h2>
+                    <div>
+                        <!-- Project Item 1 -->
+                        <div class="group mb-8 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                            <div class="flex flex-col sm:flex-row rounded-md group-hover:bg-slate-800/50 p-4 -m-4">
+                                <div class="w-full">
+                                    <h3 class="font-medium leading-snug text-slate-200">Keyboard Layout Trainer</h3>
+                                    <p class="mt-2 text-sm leading-normal">
+                                        Developed a web-based typing tutor specifically for the COLEMAK-DHm layout to improve personal typing speed and accuracy.
+                                    </p>
+                                    <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+                                        <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">ReactJS</div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Item 2 -->
+                        <div class="group mb-8 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                            <div class="flex flex-col sm:flex-row rounded-md group-hover:bg-slate-800/50 p-4 -m-4">
+                                <div class="w-full">
+                                    <h3 class="font-medium leading-snug text-slate-200">Webnovel Epub Generator</h3>
+                                    <p class="mt-2 text-sm leading-normal">
+                                        Created a script to scrape content from multiple webnovel sources and compile it into a standardized EPUB format for personal e-reading.
+                                    </p>
+                                    <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+                                        <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Python</div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Item 3 -->
+                        <div class="group transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                            <div class="flex flex-col sm:flex-row rounded-md group-hover:bg-slate-800/50 p-4 -m-4">
+                                <div class="w-full">
+                                    <h3 class="font-medium leading-snug text-slate-200">Ketawa.com Mobile App</h3>
+                                    <p class="mt-2 text-sm leading-normal">
+                                        Built a native Android application for the humor website Ketawa.com as a personal project to explore mobile development with Kotlin.
+                                    </p>
+                                    <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+                                        <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-medium leading-5 text-cyan-300">Kotlin</div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <footer class="mt-16 text-sm text-slate-500">
+                    <p>Coded in <a href="https://code.visualstudio.com/" class="font-medium text-slate-400 hover:text-cyan-300" target="_blank" rel="noreferrer noopener">Visual Studio Code</a>. Built with <a href="https://tailwindcss.com/" class="font-medium text-slate-400 hover:text-cyan-300" target="_blank" rel="noreferrer noopener">Tailwind CSS</a>.
+                    </p>
+                </footer>
+
+            </main>
+        </div>
+    </div>
+    <script>
+        // Hide loading screen when page is fully loaded
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1000); // Show loading screen for at least 1 second
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fade-in sections on scroll
+            const sections = document.querySelectorAll('.fade-in-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Active nav link on scroll
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('#content section');
+            const scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, {
+                rootMargin: '-30% 0px -70% 0px'
+            });
+
+            contentSections.forEach(section => {
+                scrollObserver.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -21,18 +21,19 @@ export const AboutModal: React.FC<AboutModalProps> = ({ onClose }) => {
       <div className="grid md:grid-cols-[1fr_1.8fr] gap-6">
         {/* Left Column: Avatar & Quick Stats */}
         <div className="space-y-4">
-          <div className="rpg-box p-3 bg-black/60 !shadow-none flex flex-col items-center text-center">
-            <div className="w-[120px] h-[120px] border-2 border-white/40 p-2 bg-black mb-3">
+          <div className="rpg-box p-4 bg-black/60 !shadow-none flex flex-col items-center text-center">
+            <div className="w-[140px] h-[140px] border-2 border-white/40 p-1 bg-[#0a1228] mb-3 shadow-[2px_2px_0_#000] overflow-hidden flex items-center justify-center">
               <img
-                src="/avatar.webp"
+                src="/profile-detail-avatar.webp"
                 alt={PROFILE_DATA.name}
-                className="w-full h-full object-contain pixelated"
+                className="w-full h-full object-cover pixelated"
+                style={{ imageRendering: 'pixelated' }}
               />
             </div>
             <div className="press text-[10px] text-[#fde047]">
               {PROFILE_DATA.name}
             </div>
-            <div className="vt text-[15px] text-white/60">
+            <div className="vt text-[15px] text-white/60 mt-0.5">
               JAKARTA, INDONESIA
             </div>
           </div>

@@ -60,3 +60,24 @@ export interface SocialLink {
   label: string;
   href: string;
 }
+
+export interface GitHubRepoMetric {
+  name: string;
+  stars: number;
+  language: string | null;
+  description: string;
+  htmlUrl: string;
+  pushedAt: string;
+}
+
+export interface GitHubMetrics {
+  publicRepos: number;
+  totalStars: number;
+  followers: number;
+  publicGists: number;
+  topLanguages: { language: string; count: number; percentage: number; color: string }[];
+  recentRepos: GitHubRepoMetric[];
+  isLive: boolean;
+  isLoading: boolean;
+  lastUpdated: string;
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.press {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.vt {
+  font-family: 'VT323', monospace;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes scan {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(8px); }
+  to { transform: translateX(0); }
+}
+
+@keyframes barGrow {
+  from { width: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes rainbowShift {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.rainbow-mode {
+  animation: rainbowShift 4s linear infinite;
+}
+
+/* Pixel Border RPG Styling */
+.rpg-box {
+  border: 4px solid #e2e8f0;
+  box-shadow:
+    0 0 0 4px #020617,
+    0 0 0 8px #e2e8f0,
+    inset 0 0 0 2px #020617;
+  background: #0f1a33;
+}
+
+.rpg-box-yellow {
+  border: 4px solid #fde047;
+  box-shadow:
+    0 0 0 4px #020617,
+    0 0 0 8px #fde047,
+    inset 0 0 0 2px #020617;
+  background: #fde047;
+  color: #000000;
+}
+
+.player-card-shadow {
+  box-shadow:
+    0 0 0 4px #020617,
+    0 0 0 8px #e2e8f0,
+    4px 4px 0 0 #000,
+    0 12px 24px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 2px #020617;
+}
+
+.game-screen-shadow {
+  box-shadow:
+    0 0 0 4px #020617,
+    0 0 0 8px #e2e8f0,
+    4px 4px 0 0 #000,
+    0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.03) 2px,
+    rgba(255, 255, 255, 0.03) 4px
+  );
+  pointer-events: none;
+  animation: scan 0.2s linear infinite;
+}

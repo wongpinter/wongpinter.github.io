@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+import fs from 'fs';
+import { execSync } from 'child_process';
+import path from 'path';
+
+const rootDir = process.cwd();
+
+console.log('1. Preparing source index.html template with /src/main.tsx entry...');
+const devIndexHtml = `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -32,10 +39,26 @@
     <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script type="module" crossorigin src="/assets/index-CdIApUYb.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CIhYYt_2.css">
   </head>
   <body class="bg-[#060a18] text-white">
     <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+`;
+
+fs.writeFileSync(path.join(rootDir, 'index.html'), devIndexHtml, 'utf-8');
+
+console.log('2. Running TypeScript compiler and Vite production build...');
+execSync('npx tsc && npx vite build', { stdio: 'inherit' });
+
+console.log('3. Copying compiled distribution to root for GitHub Pages...');
+fs.copyFileSync(path.join(rootDir, 'dist/index.html'), path.join(rootDir, 'index.html'));
+
+// Copy all assets from dist/assets to assets/
+const distAssets = fs.readdirSync(path.join(rootDir, 'dist/assets'));
+for (const file of distAssets) {
+  fs.copyFileSync(path.join(rootDir, 'dist/assets', file), path.join(rootDir, 'assets', file));
+}
+
+console.log('✓ Build and static distribution prepared successfully!');

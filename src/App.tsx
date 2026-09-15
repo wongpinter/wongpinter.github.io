@@ -77,7 +77,7 @@ export const App: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="wongpinter (Sugeng. S) · GitHub"
-        className="fixed top-3 right-3 z-[60] w-10 h-10 bg-black border-[3px] border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors press text-[12px]"
+        className="fixed top-3 right-3 z-[60] w-10 h-10 bg-black border-[3px] border-white flex items-center justify-center hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#fde047] transition-colors press text-[12px]"
       >
         ⌁
       </a>
@@ -99,6 +99,7 @@ export const App: React.FC = () => {
               src="/avatar.webp"
               className="w-full h-full object-cover opacity-[0.10]"
               alt="Jakarta night skyline background"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-[#060a18]/85" />
             <div className="absolute inset-0 bg-gradient-to-b from-[#060a18]/40 via-transparent to-[#060a18]" />
@@ -131,7 +132,7 @@ export const App: React.FC = () => {
                   rel="noopener noreferrer"
                   className="hidden md:inline hover:text-white"
                 >
-                  wongpinter (Sugeng. S) · GitHub • JAKARTA NIGHTS 2025
+                  wongpinter (Sugeng. S) · GitHub • JAKARTA NIGHTS 2026
                 </a>
                 <span className="md:hidden">12+ YRS</span>
               </div>

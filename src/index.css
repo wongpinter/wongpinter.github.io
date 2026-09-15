@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -57,11 +55,37 @@
   100% { filter: hue-rotate(360deg); }
 }
 
-.rainbow-mode {
-  animation: rainbowShift 4s linear infinite;
+@media (prefers-reduced-motion: no-preference) {
+  .rainbow-mode {
+    animation: rainbowShift 4s linear infinite;
+  }
 }
 
 /* Pixel Border RPG Styling */
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #fde047;
+  outline-offset: 2px;
+}
+
+/* Disabled states */
+button:disabled,
+a:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Reduced motion: disable all animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .rpg-box {
   border: 4px solid #e2e8f0;
   box-shadow:
@@ -98,17 +122,35 @@
     0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
-.scanlines::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(255, 255, 255, 0.03) 2px,
-    rgba(255, 255, 255, 0.03) 4px
-  );
-  pointer-events: none;
-  animation: scan 0.2s linear infinite;
+@media (prefers-reduced-motion: no-preference) {
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    );
+    pointer-events: none;
+    animation: scan 0.2s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    );
+    pointer-events: none;
+  }
 }

@@ -9,8 +9,8 @@ export const PROFILE_DATA = {
   mainWeapon: "Go",
   secondaryWeapons: ["Python", "TypeScript", "PHP", "Dart", "Kotlin"],
   focusAreas: ["CDC", "message brokers", "API gateways", "AI agents", "WhatsApp Business API"],
-  currentlyHackingOn: ["GDM (Go download manager)", "audiobook-organizer"],
-  typewriterBio: "Senior Backend Engineer from Jakarta. 12+ years shipping reliable systems. Main weapon: Go. Secondary: Python, TypeScript, PHP, Dart, Kotlin. Focus: CDC, message brokers, API gateways, AI agents, WhatsApp Business API. Currently hacking on GDM (Go download manager) and audiobook-organizer.",
+  currentlyHackingOn: ["GDM (Go download manager)", "audiobook-organizer", "MemoDirector (PAO memory trainer)"],
+  typewriterBio: "Senior Backend Engineer from Jakarta. 12+ years shipping reliable systems. Main weapon: Go. Secondary: Python, TypeScript, PHP, Dart, Kotlin. Focus: CDC, message brokers, API gateways, AI agents, WhatsApp Business API. Currently hacking on GDM (Go download manager), audiobook-organizer, and MemoDirector.",
   summary: "I build systems that move data reliably — API gateways, real-time pipelines, change-data-capture, message brokers, CLI tools, and AI agents. Go is my daily driver, and I ship production code in Python, TypeScript, PHP, and Dart.",
   quote: {
     text: "The best code is the code never written. The second best ships Friday.",
@@ -24,7 +24,7 @@ export const PROFILE_DATA = {
 };
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { label: "LINKEDIN", href: "https://linkedin.com/in/wongpinter" },
+  { label: "LINKEDIN", href: "https://www.linkedin.com/in/sugengs/" },
   { label: "TWITTER @the_wongpinter", href: "https://twitter.com/the_wongpinter" }
 ];
 

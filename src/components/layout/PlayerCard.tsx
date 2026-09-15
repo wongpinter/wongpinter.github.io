@@ -27,20 +27,10 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({ isRainbowMode }) => {
           </div>
         </div>
 
-        {/* Chibi Pixel Avatar in Glowing Frame */}
+        {/* Chibi Pixel Avatar — flat pixel frame, no glow halos */}
         <div className="relative w-full flex flex-col items-center mb-4">
-          {/* Ambient Glow Halos */}
-          <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180px] h-[180px] rounded-full blur-[28px] opacity-70 pointer-events-none"
-            style={{
-              background:
-                'radial-gradient(circle, rgba(253,224,71,0.35) 0%, rgba(125,211,252,0.25) 35%, rgba(168,85,247,0.18) 70%, transparent 80%)'
-            }}
-          />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] blur-[40px] opacity-40 pointer-events-none bg-[#fde047]/20 rounded-full" />
-
           {/* Bordered Avatar Container with Corner Pixels */}
-          <div className="relative bg-[#0a1228]/70 border-[4px] border-white shadow-[0_0_0_4px_#020617,0_0_0_8px_rgba(255,255,255,0.8),0_0_24px_rgba(253,224,71,0.35),0_0_48px_rgba(125,211,252,0.20)] p-3 backdrop-blur-[1px]">
+          <div className="relative bg-[#0a1228]/70 border-[4px] border-white shadow-[0_0_0_4px_#020617,0_0_0_8px_rgba(255,255,255,0.8)] p-3 backdrop-blur-[1px]">
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/10" />
 
@@ -51,9 +41,9 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({ isRainbowMode }) => {
                 className="w-full h-full object-contain pixelated block"
                 style={{
                   imageRendering: 'pixelated',
-                  filter:
-                    'drop-shadow(0 2px 0 rgba(0,0,0,0.8)) drop-shadow(0 0 8px rgba(253,224,71,0.25))'
+                  filter: 'drop-shadow(0 2px 0 rgba(0,0,0,0.8))'
                 }}
+                loading="lazy"
                 draggable={false}
               />
             </div>

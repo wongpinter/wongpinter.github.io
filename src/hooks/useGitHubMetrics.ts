@@ -17,39 +17,40 @@ const LANGUAGE_COLORS: Record<string, string> = {
 };
 
 const FALLBACK_METRICS: GitHubMetrics = {
-  publicRepos: 52,
-  totalStars: 48,
-  followers: 35,
+  publicRepos: 38,
+  totalStars: 4,
+  followers: 2,
   publicGists: 4,
   topLanguages: [
-    { language: 'Go', count: 28, percentage: 55, color: '#38bdf8' },
-    { language: 'Python', count: 10, percentage: 20, color: '#facc15' },
-    { language: 'TypeScript', count: 8, percentage: 15, color: '#818cf8' },
-    { language: 'Dart / Other', count: 5, percentage: 10, color: '#2dd4bf' }
+    { language: 'Go', count: 15, percentage: 40, color: '#38bdf8' },
+    { language: 'Python', count: 8, percentage: 21, color: '#facc15' },
+    { language: 'TypeScript', count: 5, percentage: 13, color: '#818cf8' },
+    { language: 'JavaScript', count: 3, percentage: 8, color: '#fde047' },
+    { language: 'PHP / Other', count: 7, percentage: 18, color: '#a78bfa' }
   ],
   recentRepos: [
     {
-      name: 'walstream',
-      stars: 12,
+      name: 'MemoDirector',
+      stars: 0,
+      language: 'TypeScript',
+      description: 'Local-first PAO memory system builder with AI casting',
+      htmlUrl: 'https://github.com/wongpinter/MemoDirector',
+      pushedAt: new Date().toISOString()
+    },
+    {
+      name: 'clipush',
+      stars: 0,
       language: 'Go',
-      description: 'Change Data Capture tool for PostgreSQL WAL streaming',
-      htmlUrl: 'https://github.com/wongpinter/walstream',
+      description: 'CLI tool to save raw screenshots to remote server',
+      htmlUrl: 'https://github.com/wongpinter/clipush',
       pushedAt: new Date().toISOString()
     },
     {
       name: 'gdm',
-      stars: 8,
+      stars: 0,
       language: 'Go',
       description: 'Terminal download manager with segmented HTTP & BitTorrent',
       htmlUrl: 'https://github.com/wongpinter/gdm',
-      pushedAt: new Date().toISOString()
-    },
-    {
-      name: 'agent-property-mcp',
-      stars: 6,
-      language: 'Go',
-      description: 'Model Context Protocol (MCP) server in Go',
-      htmlUrl: 'https://github.com/wongpinter/agent-property-mcp',
       pushedAt: new Date().toISOString()
     }
   ],

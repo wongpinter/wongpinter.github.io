@@ -78,8 +78,27 @@ export const PUBLIC_PROJECTS: Project[] = [
     icon: "robot",
     color: "from-indigo-300 to-violet-700",
     tech: ["TypeScript", "Cloudflare Workers", "Telegram"],
-    desc: "Serverless Telegram worklog bot with analytics + GitHub/Jira sync",
-    github: "https://github.com/wongpinter/sregep-bot"
+    desc: "Serverless Telegram worklog bot with analytics + GitHub/Jira sync"
+  },
+  {
+    name: "MEMODIRECTOR",
+    rarity: "EPIC",
+    type: "AI Tool",
+    icon: "sparkle",
+    color: "from-rose-300 to-pink-600",
+    tech: ["TypeScript", "React 19", "Gemini"],
+    desc: "Local-first PAO memory system builder with AI casting, Anki export",
+    github: "https://github.com/wongpinter/MemoDirector"
+  },
+  {
+    name: "CLIPUSH",
+    rarity: "COMMON",
+    type: "CLI Tool",
+    icon: "download",
+    color: "from-lime-300 to-green-600",
+    tech: ["Go"],
+    desc: "CLI tool to save raw screenshots to remote server",
+    github: "https://github.com/wongpinter/clipush"
   },
   {
     name: "YET-ANOTHER-LM-EXTRACTOR",

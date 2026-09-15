@@ -27,7 +27,7 @@ export function getQuestStatusStyle(status: QuestStatus): string {
 export const QuestLogModal: React.FC<QuestLogModalProps> = ({ onClose }) => {
   return (
     <ModalContainer
-      title="QUEST LOG (13 INTERNAL & CLIENT BUILDS)"
+      title="QUEST LOG (12 INTERNAL & CLIENT BUILDS)"
       subtitle="Production systems, internal tools, and client platforms"
       icon="quest"
       onClose={onClose}

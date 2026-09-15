@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 export const BackgroundStars: React.FC = React.memo(() => {
   const stars = useMemo(() => 
-    Array.from({ length: 70 }, (_, i) => ({
+    Array.from({ length: 30 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
@@ -24,7 +24,8 @@ export const BackgroundStars: React.FC = React.memo(() => {
             width: `${star.s}px`,
             height: `${star.s}px`,
             animation: `twinkle ${star.d + 1.5}s ease-in-out infinite`,
-            animationDelay: `${star.d}s`
+            animationDelay: `${star.d}s`,
+            willChange: 'transform, opacity'
           }}
         />
       ))}

@@ -20,6 +20,8 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({ onStart, isStarting })
           src="/avatar.webp"
           alt="Jakarta night skyline"
           className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 
@@ -39,7 +41,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({ onStart, isStarting })
         <div className="mb-6 flex items-center gap-3">
           <div className="h-[4px] w-8 md:w-12 bg-white/60 shrink-0" />
           <span className="vt text-[13px] md:text-[14px] tracking-wider md:tracking-[0.3em] text-white/70 whitespace-nowrap">
-            © 2025 WONGPINTER • LVL 12+ YRS
+            © 2026 WONGPINTER • LVL 12+ YRS
           </span>
           <div className="h-[4px] w-8 md:w-12 bg-white/60 shrink-0" />
         </div>

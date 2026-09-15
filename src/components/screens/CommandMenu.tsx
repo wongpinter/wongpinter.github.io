@@ -121,7 +121,7 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({
         {/* 3 Stats Tiles */}
         <div className="mt-6 w-full grid grid-cols-3 gap-3">
           {[
-            { k: 'REPOS', v: '50+' },
+            { k: 'REPOS', v: '38+' },
             { k: 'YEARS', v: '12+' },
             { k: 'MAIN', v: 'GO' }
           ].map((stat) => (

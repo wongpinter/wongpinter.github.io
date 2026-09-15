@@ -28,6 +28,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ onClose }) => {
                 alt={PROFILE_DATA.name}
                 className="w-full h-full object-cover pixelated"
                 style={{ imageRendering: 'pixelated' }}
+                loading="lazy"
               />
             </div>
             <div className="press text-[10px] text-[#fde047]">

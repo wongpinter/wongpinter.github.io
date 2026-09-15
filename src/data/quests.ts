@@ -97,16 +97,6 @@ export const PRIVATE_QUESTS: Quest[] = [
     private: true
   },
   {
-    title: "MemoDirector",
-    company: "Mnemonic Training",
-    date: "2024",
-    status: "PRIVATE",
-    reward: "+PAO +Memory",
-    desc: "PAO (Person-Action-Object) casting & memorization director for mnemonic training.",
-    stack: ["TypeScript"],
-    private: true
-  },
-  {
     title: "Agent Memory (Memory Pi)",
     company: "AI Research",
     date: "2024 — NOW",

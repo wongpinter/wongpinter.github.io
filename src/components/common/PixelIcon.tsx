@@ -195,9 +195,10 @@ export const PixelIcon: React.FC<PixelIconProps> = ({
 
     default:
       return (
-        <span className={`inline-block text-center font-mono ${className}`}>
-          {name}
-        </span>
+        <svg {...iconProps}>
+          {/* Fallback: generic pixel square */}
+          <path d="M4 4h16v16H4V4zm2 2v12h12V6H6z" />
+        </svg>
       );
   }
 };

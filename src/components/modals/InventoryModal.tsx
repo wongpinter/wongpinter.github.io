@@ -16,7 +16,7 @@ export const InventoryModal: React.FC<InventoryModalProps> = ({
 }) => {
   return (
     <ModalContainer
-      title="PUBLIC INVENTORY (10 ITEMS)"
+      title="PUBLIC INVENTORY (11 ITEMS)"
       subtitle="Open-source tools, frameworks, and packages"
       icon="swords"
       onClose={onClose}

@@ -62,6 +62,26 @@ export const PUBLIC_PROJECTS: Project[] = [
     github: "https://github.com/wongpinter/agent-property-mcp"
   },
   {
+    name: "KOMIYOMI-EXT",
+    rarity: "LEGENDARY",
+    type: "Android App",
+    icon: "book",
+    color: "from-blue-400 to-indigo-600",
+    tech: ["Kotlin", "Android", "EPUB/PDF"],
+    desc: "Production manga, comic (CBZ/CBR), EPUB, and PDF reader with source extensions and trackers",
+    github: "https://github.com/wongpinter/komiyomi-ext"
+  },
+  {
+    name: "KETAWA-READER",
+    rarity: "EPIC",
+    type: "Android App",
+    icon: "sparkle",
+    color: "from-orange-400 to-amber-600",
+    tech: ["Kotlin", "Compose", "Room"],
+    desc: "Distraction-free offline humor reader for Ketawa.com archive in 100% Jetpack Compose with dual i18n",
+    github: "https://github.com/wongpinter/ketawa-reader-app"
+  },
+  {
     name: "WEBNOVEL-SCRAPER",
     rarity: "RARE",
     type: "Scraper",

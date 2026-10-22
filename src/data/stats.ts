@@ -6,7 +6,7 @@ export const SKILLS: Skill[] = [
   { name: "TYPESCRIPT / JS", lvl: 85, color: "#38bdf8", sub: "React/Next.js, Workers, Chrome extensions" },
   { name: "PHP", lvl: 80, color: "#a78bfa", sub: "Laravel / Lumen" },
   { name: "DART / FLUTTER", lvl: 78, color: "#4ade80", sub: "pantryku, GadaiKu" },
-  { name: "KOTLIN", lvl: 70, color: "#fb7185", sub: "ketawa-reader-app" },
+  { name: "KOTLIN", lvl: 82, color: "#fb7185", sub: "komiyomi-ext, ketawa-reader-app, Compose" },
   { name: "GDSCRIPT / GODOT", lvl: 65, color: "#478cbf", sub: "Connect Word, Platformer Controller, Kid Platformer" },
   { name: "SHELL / LUA", lvl: 75, color: "#e2e8f0", sub: "tooling & nvim" },
   { name: "RUST", lvl: 45, color: "#f97316", sub: "Learning" }
@@ -16,7 +16,7 @@ export const STACK_CATEGORIES: StackCategory[] = [
   { title: "BACKEND", items: ["Go", "Python", "PHP", "PostgreSQL", "Redis", "RabbitMQ", "REST", "gRPC", "SOAP"], col: "#00ADD8" },
   { title: "DATA", items: ["WAL/CDC", "Pub/Sub", "BigQuery"], col: "#facc15" },
   { title: "AI", items: ["MCP", "LLM", "Gemini", "WhatsApp Meta API"], col: "#a78bfa" },
-  { title: "GAME", items: ["Godot 4", "GDScript"], col: "#478cbf" },
-  { title: "FRONTEND", items: ["React", "Next.js", "Flutter", "Kotlin"], col: "#38bdf8" },
+  { title: "MOBILE", items: ["Android", "Kotlin", "Jetpack Compose", "Room SQLite", "Flutter"], col: "#fb7185" },
+  { title: "FRONTEND", items: ["React 19", "Next.js", "TypeScript", "Tailwind CSS", "Canvas"], col: "#38bdf8" },
   { title: "INFRA", items: ["Docker", "Traefik", "Nginx", "GitHub Actions", "Cloudflare Workers", "GCP"], col: "#4ade80" }
 ];

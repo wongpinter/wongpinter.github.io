@@ -7,11 +7,11 @@ export const PROFILE_DATA = {
   location: "Jakarta, Indonesia",
   experienceYears: "12+ yrs",
   mainWeapon: "Go",
-  secondaryWeapons: ["Python", "TypeScript", "PHP", "Dart", "Kotlin"],
-  focusAreas: ["CDC", "message brokers", "API gateways", "AI agents", "WhatsApp Business API"],
-  currentlyHackingOn: ["GDM (Go download manager)", "audiobook-organizer", "MemoDirector (PAO memory trainer)"],
-  typewriterBio: "Senior Backend Engineer from Jakarta. 12+ years shipping reliable systems. Main weapon: Go. Secondary: Python, TypeScript, PHP, Dart, Kotlin. Focus: CDC, message brokers, API gateways, AI agents, WhatsApp Business API. Currently hacking on GDM (Go download manager), audiobook-organizer, and MemoDirector.",
-  summary: "I build systems that move data reliably — API gateways, real-time pipelines, change-data-capture, message brokers, CLI tools, and AI agents. Go is my daily driver, and I ship production code in Python, TypeScript, PHP, and Dart.",
+  secondaryWeapons: ["Python", "TypeScript", "Kotlin", "PHP", "Dart"],
+  focusAreas: ["CDC", "message brokers", "API gateways", "AI agents", "WhatsApp Business API", "Android / Compose"],
+  currentlyHackingOn: ["Ketawa Reader (Compose)", "MemoDirector (PAO trainer)", "GDM (Go download manager)"],
+  typewriterBio: "Senior Backend Engineer from Jakarta. 12+ years shipping reliable systems. Main weapon: Go. Secondary: Python, TypeScript, Kotlin, PHP, Dart. Focus: CDC, message brokers, API gateways, AI agents, WhatsApp Business API. Currently hacking on Ketawa Reader (Compose), MemoDirector, and GDM.",
+  summary: "I build systems that move data reliably — API gateways, real-time pipelines, change-data-capture, message brokers, CLI tools, and AI agents. Go is my daily driver, and I ship production code in Python, TypeScript, Kotlin, and PHP.",
   quote: {
     text: "The best code is the code never written. The second best ships Friday.",
     author: "SUGENG SUPRIYADI • JAKARTA"
@@ -31,5 +31,5 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const SAVE_SLOTS: SaveSlot[] = [
   { slot: "SLOT 01", name: "MCP AGENTS", time: "2024 - NOW", loc: "Go + WhatsApp" },
   { slot: "SLOT 02", name: "WALSTREAM", time: "LEGENDARY", loc: "Go + PG" },
-  { slot: "SLOT 03", name: "GDM + GadaiKu", time: "IN PROGRESS", loc: "Go + Flutter" }
+  { slot: "SLOT 03", name: "KOMIYOMI + KETAWA", time: "RELEASED", loc: "Android + Compose" }
 ];
